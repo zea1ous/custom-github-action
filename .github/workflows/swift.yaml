@@ -24,18 +24,18 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Cache packages/Tools/.build
+      - name: Cache BuildTools/.build
         uses: actions/cache@v1
         with:
-          path: packages/Tools/.build
-          key: ${{ runner.os }}-swift-tools-build-${{ hashFiles('packages/Tools/Package.resolved') }}
+          path: BuildTools/.build
+          key: ${{ runner.os }}-swift-tools-build-${{ hashFiles('BuildTools/Package.resolved') }}
           restore-keys: |
             ${{ runner.os }}-swift-tools-build-
       - name: Cache ~/bin
         uses: actions/cache@v1
         with:
           path: ~/bin
-          key: ${{ runner.os }}-home-bin-${{ hashFiles('packages/Tools/Package.resolved') }}
+          key: ${{ runner.os }}-home-bin-${{ hashFiles('BuildTools/Package.resolved') }}
           restore-keys: |
             ${{ runner.os }}-home-bin-
       - name: Install Swift tools
