@@ -16,6 +16,9 @@ jobs:
           pokemon_id: 150
       - name: Get the pokemon
         run: echo "${{ steps.pokemon.outputs.pokemon_name }} attack"
+
+      - name: Swift Format
+        run: nicklockwood/SwiftFormat
         
       - name: Git Auto-commit
         uses: stefanzweifel/git-auto-commit-action@v4
