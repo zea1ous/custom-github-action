@@ -24,9 +24,6 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Update PATH
-        run: echo ::add-path::$HOME/bin
-
       - name: Cache packages/Tools/.build
         uses: actions/cache@v1
         with:
